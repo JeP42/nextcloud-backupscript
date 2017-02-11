@@ -12,7 +12,6 @@ RSYNCCONF=(--delete)
 SSH="/usr/bin/ssh"; LN="/bin/ln"; ECHO="/bin/echo"
 DATE="/bin/date"; MAIL="ssmtp"
 RSYNC="/usr/bin/rsync"; LAST="last";
-INC="--link-dest=$TARGET/$LAST"
 
 SOURCES=()
 TARGET=""
@@ -35,6 +34,7 @@ DBBACKUPFILE="$DBBACKUPFOLDER/nextcloud-db-backup.bak"
 # variables have to be set via external configuration file
 . ./nextcloud-backup.config
 
+INC="--link-dest=$TARGET/$LAST"
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~ Initializaion stuff  ~~
