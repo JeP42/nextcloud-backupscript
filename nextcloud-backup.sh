@@ -29,12 +29,13 @@ DBUSER=""
 DBPASSWORD=""
 DATABASE=""
 DBBACKUPFOLDER=""
-DBBACKUPFILE="$DBBACKUPFOLDER/nextcloud-db-backup.bak"
 
-# variables have to be set via external configuration file
-. ./nextcloud-backup.config
+# variables have to be set via external configuration file.
+# Path to config file is passed as argument
+. $1
 
 INC="--link-dest=$TARGET/$LAST"
+DBBACKUPFILE="$DBBACKUPFOLDER/nextcloud-db-backup.bak"
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~ Initializaion stuff  ~~
